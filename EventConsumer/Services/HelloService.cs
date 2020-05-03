@@ -3,6 +3,7 @@ using Shared;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 
 namespace EventConsumer.Services
 {
@@ -10,8 +11,9 @@ namespace EventConsumer.Services
     {
         public object Any(Hello req)
         {
-            
-            return new HelloResponse { Result = $"This is a reply from Consumer '{TryResolve<ConsumerInfo>().Name}'. You wrote: " + req.Name };
+            System.Diagnostics.Debug.WriteLine($"Thread { Thread.CurrentThread.ManagedThreadId}: Waiting 2 sec (text={req.Name})");
+            Thread.Sleep(2000);
+            return new HelloResponse { Result = $"Thread {Thread.CurrentThread.ManagedThreadId}: Reply '{TryResolve<ConsumerInfo>().Name}'. You wrote: " + req.Name };
         }
     }
 }
