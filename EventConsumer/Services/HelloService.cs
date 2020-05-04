@@ -13,6 +13,7 @@ namespace EventConsumer.Services
         {
             System.Diagnostics.Debug.WriteLine($"Thread { Thread.CurrentThread.ManagedThreadId}: Waiting 2 sec (text={req.Name})");
             Thread.Sleep(2000);
+            System.Diagnostics.Debug.WriteLine($"Thread { Thread.CurrentThread.ManagedThreadId}: done waiting!");
             return new HelloResponse { Result = $"Thread {Thread.CurrentThread.ManagedThreadId}: Reply '{TryResolve<ConsumerInfo>().Name}'. You wrote: " + req.Name };
         }
     }
