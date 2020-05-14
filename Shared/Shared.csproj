@@ -4,4 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\[GIT]\alfa\Submodules\Core\CoreCommons\CoreCommons\CoreCommons.csproj" />
+  </ItemGroup>
+
 </Project>

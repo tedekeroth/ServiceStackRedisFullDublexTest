@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using tWorks.Alfa.AlfaCommons.Actors.Requests;
 
 namespace EventPublisher
 {
@@ -40,7 +41,7 @@ namespace EventPublisher
 
         private void button2_Click(object sender, EventArgs e)
         {
-            client.AddHello(textBox2.Text);
+            client.AddMessage(new GetLegitimationsForCustomer(332211, 123));
             textBox2.Text = "Time is " + DateTime.Now.ToString("HH:mm:ss.fff");
             button2.Focus();
         }
