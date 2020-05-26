@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\[GIT]\alfa\Submodules\Core\CoreCommons\CoreCommons\CoreCommons.csproj" />
+    <ProjectReference Include="..\..\Alfa\Submodules\Core\CoreCommons\CoreCommons\CoreCommons.csproj" />
   </ItemGroup>
 
 </Project>
